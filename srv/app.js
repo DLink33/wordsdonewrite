@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+//NOTE: /r new line is causing issues after the "#!/usr/bin/env node" line
+
 //This file is for running our Node server.
 
 // One way to include libraries ("The common JS way")
