@@ -10,15 +10,9 @@
 }
 
 @font-face {
-  font-family: 'DescMenu';
-  src: url('assets/DescMenu.TTF') format('truetype');
+  font-family: 'Descent';
+  src: url('assets/fonts/DescScor.ttf') format('truetype');
 }
-
-@font-face {
-  font-family: 'DescScor';
-  src: url('assets/DescScor.TTF') format('truetype');
-}
-
 
 header {
   margin-top: 1vh;
@@ -38,12 +32,13 @@ img {
 }
 
 h1 {
-  font-family: "DescMenu", Corbel, "serif";
-  font-size: 28px;
+ font-family: "Descent", Corbel, "serif";
+  font-size: 10vw;
   font-weight: bolder;
-  color: var(--main-text-color);
+  color: var(--my-yellow);
   margin-bottom: 20px;
   text-align: center;
+  text-decoration: underline;
 }
 
 h2 {
