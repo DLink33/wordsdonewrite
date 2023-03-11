@@ -1,0 +1,19 @@
+{
+  "name": "repository",
+  "version": "1.0.0",
+  "description": "Repository for the project in CS - 3110 Spring 2023 contributors:  - David Linkowski - Tate Minch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DLink33/wordsdonewrite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DLink33/wordsdonewrite/issues"
+  },
+  "homepage": "https://github.com/DLink33/wordsdonewrite#readme"
+}
