@@ -1,0 +1,97 @@
+:root {
+  --main-bg-color: rgba(40,40,40);
+  --main-text-color: rgb(225,225,225);
+  --my-yellow: #f1b433;
+  --my-orange: #f26a38 ;
+  --my-red:    #F00046;
+  --my-purple: #6B39E5;
+  --my-pink:   #c044d5;
+  --my-blue:   #3727a3;
+}
+
+@font-face {
+  font-family: 'DescMenu';
+  src: url('assets/DescMenu.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'DescScor';
+  src: url('assets/DescScor.TTF') format('truetype');
+}
+
+
+header {
+  margin-top: 1vh;
+  margin-bottom: 1.5vh;
+  text-align: left;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+img {
+  width: 20vw;
+  padding: 1.25vw;
+  border-radius: 45px;
+}
+
+h1 {
+  font-family: "DescMenu", Corbel, "serif";
+  font-size: 28px;
+  font-weight: bolder;
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-family: Corbel, "sans-serif";
+  font-size: 4.25vh;
+  color: var(--my-color2);
+  text-decoration: underline;
+}
+
+#my-table {
+  border-collapse: collapse; /* merge adjacent cell borders */
+  border: 2px solid var(--main-text-color); /* set outer border thickness and color */
+  width: 100%; /* set table width */
+}
+
+#my-table th, #my-table td {
+  border: 1px solid var(--main-text-color); /* set inner cell border thickness and color */
+  text-align: center;
+}
+
+#my-table th:first-child, #my-table td:first-child,
+#my-table th:nth-child(2), #my-table td:nth-child(2) {
+  width: 40%; /* set fixed width for the first two columns */
+  max-width: 500px; /* set a maximum width for the columns */
+}
+
+
+.delete-button {
+  border: none;
+  padding: 5px; /* add padding to create spacing between buttons */
+  margin: 0 5px; /* add margin to separate buttons visually */
+  background-color: var(--my-color2);
+  color: var(--main-text-color);
+}
+
+.edit-button {
+  border: none;
+  padding: 5px; /* add padding to create spacing between buttons */
+  margin: 0 5px; /* add margin to separate buttons visually */
+  background-color: rgb(163, 84, 236);
+  color: var(--main-text-color);
+}
+
+.sumbit-button {
+  border: none;
+  padding: 5px; /* add padding to create spacing between buttons */
+  margin: 0 5px; /* add margin to separate buttons visually */
+  background-color: rgb(50, 190, 108);
+  color: var(--main-text-color);
+}
+
