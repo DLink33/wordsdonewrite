@@ -25,8 +25,12 @@ app.get("/style.css", (req, res) => {
   res.sendFile(webPath + "/style.css");
 });
 
-app.get("../assets/fonts/DescScor.ttf", (req, res) => {
-  res.sendFile(webPath + "../assets/fonts/DescScor.ttf");
+app.get("/assets/fonts/DescScor.ttf", (req, res) => {
+  res.sendFile(webPath + "/assets/fonts/DescScor.ttf");
+});
+
+app.get("/assets/fonts/ebrima.ttf", (req, res) => {
+  res.sendFile(webPath + "/assets/fonts/ebrima.ttf");
 });
 
 // Send back our landing page

@@ -5,7 +5,12 @@ console.log("Running index.js...");
 // NOTE: Any function given the 'async' keyword means that the function implicitly returns a Promise
 // This allows us to use the 'await' keyword
 
-
+// Select the input on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const myForm = document.getElementById("myForm");
+  const userInput = myForm.querySelector("#userInput");
+  userInput.focus();
+});
 
 /////// TEST FUNCTIONS ///////
 

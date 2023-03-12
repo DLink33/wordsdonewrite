@@ -1,17 +1,28 @@
 :root {
-  --main-bg-color: rgba(40,40,40);
-  --main-text-color: rgb(225,225,225);
-  --my-yellow: #f1b433;
-  --my-orange: #f26a38 ;
-  --my-red:    #F00046;
-  --my-purple: #6B39E5;
-  --my-pink:   #c044d5;
-  --my-blue:   #3727a3;
+  --main-bg-color:    #282828;
+  --main-text-color:  #e1e1e1;
+  --my-yellow:        #f1b433;
+  --my-orange:        #f26a38 ;
+  --my-red:           #d8164d;
+  --my-purple:        #6B39E5;
+  --my-pink:          #c044d5;
+  --my-blue:          #3a25c4;
+  --my-green:         #0da379;
 }
+
+/* @font-face {
+  font-family: 'Descent';
+  src: url('../assets/fonts/DescScor.ttf') format('truetype');
+} */
 
 @font-face {
   font-family: 'Descent';
   src: url('assets/fonts/DescScor.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ebrima';
+  src: url('assets/fonts/ebrima.ttf') format('truetype');
 }
 
 header {
@@ -33,19 +44,17 @@ img {
 
 h1 {
  font-family: "Descent", Corbel, "serif";
-  font-size: 10vw;
+  font-size:6vw;
   font-weight: bolder;
   color: var(--my-yellow);
   margin-bottom: 20px;
   text-align: center;
-  text-decoration: underline;
 }
 
 h2 {
   font-family: Corbel, "sans-serif";
   font-size: 4.25vh;
   color: var(--my-color2);
-  text-decoration: underline;
 }
 
 #my-table {
@@ -65,6 +74,10 @@ h2 {
   max-width: 500px; /* set a maximum width for the columns */
 }
 
+div button {
+  text-align: center;
+}
+
 
 .delete-button {
   border: none;
@@ -82,11 +95,53 @@ h2 {
   color: var(--main-text-color);
 }
 
-.sumbit-button {
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: .5vw;
+}
+
+.submit-button {
   border: none;
   padding: 5px; /* add padding to create spacing between buttons */
   margin: 0 5px; /* add margin to separate buttons visually */
-  background-color: rgb(50, 190, 108);
+  background-color: var(--my-blue);
   color: var(--main-text-color);
+  font-family: "Descent", Corbel, "serif";
+  font-size: auto;
+  text-align: center;
+  width: 10;
+  height: 3;
+
+}
+
+.wordsdone {
+  color: var(--main-text-color);
+}
+
+.wordsdone-write {
+  color: var(--my-yellow);
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  justify-content: right;
+  align-items: self-start;
+}
+
+form input[type="text"]{
+  background-color: transparent;
+  color: var(--main-text-color);
+  border-style: solid;
+  border-color: var(--main-text-color);
+  outline: none;
+  margin: auto;
+  font-family: "ebrima", sans-serif;
+  font-size: 1.5vw;
+  width: 60%;
+  height: 2em;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
