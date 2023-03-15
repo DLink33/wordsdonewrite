@@ -17,12 +17,12 @@
 
 @font-face {
   font-family: 'Descent';
-  src: './assets/fonts/DescScor.ttf' format('truetype');
+  src: url('./assets/fonts/DescScor.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'ebrima';
-  src: './assets/fonts/ebrima.ttf' format('truetype');
+  src: url('./assets/fonts/ebrima.ttf') format('truetype');
 }
 
 header {
