@@ -33,6 +33,11 @@ app.get("/", (req, res) => {
 //   res.sendFile(webPath + "/assets/fonts/ebrima.ttf");
 // });
 
+app.get('/api', (req,res) => {
+  res.sendFile(webPath + '/index.js');
+  console.log('eyo')
+});
+
 // Send back our landing page
 app.get("/index.html", (req, res) => {
   res.sendFile(webPath + "/index.html");
