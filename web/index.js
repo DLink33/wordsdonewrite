@@ -1,6 +1,6 @@
 // This file runs the logic and dynamic element from the client side.
 
-const { response } = require("express");
+// const { response } = require("express");
 
 console.log("Running index.js...");
 
@@ -16,13 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /////// TEST FUNCTIONS ///////
 
-document.getElementById('wordCountButton').addEventListener('submit', (e) => {
+document.getElementById('myForm').addEventListener('submit', (e) => {
   e.preventDefault();
   fetch('/api', {
-    // method: 'FETCH'
+    method: 'POST',
+    body: new URLSearchParams(new FormData(e.target))
   }).then(response => {return response.json();}).then(data => {
-    console.log('hello');
-  })
+    document.getElementById('numWords').innerHTML = 'Words: ' + data['numWords'];
+  });
 });
 
 // This function tests the POST method, which should post to the server the information defined herein
