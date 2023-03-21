@@ -1,5 +1,7 @@
 // This file runs the logic and dynamic element from the client side.
 
+const { response } = require("express");
+
 console.log("Running index.js...");
 
 // NOTE: Any function given the 'async' keyword means that the function implicitly returns a Promise
@@ -13,6 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /////// TEST FUNCTIONS ///////
+
+document.getElementById('wordCountButton').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch('/api', {
+    // method: 'FETCH'
+  }).then(response => {return response.json();}).then(data => {
+    console.log('hello');
+  })
+});
 
 // This function tests the POST method, which should post to the server the information defined herein
 async function testPOST() {
