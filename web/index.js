@@ -14,17 +14,32 @@ document.addEventListener("DOMContentLoaded", () => {
   userInput.focus();
 });
 
-/////// TEST FUNCTIONS ///////
-
-document.getElementById('myForm').addEventListener('submit', (e) => {
+// Add event listener for submitting the form with the words
+document.getElementById("myForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  fetch('/api', {
-    method: 'POST',
-    body: new URLSearchParams(new FormData(e.target))
-  }).then(response => {return response.json();}).then(data => {
-    document.getElementById('numWords').innerHTML = 'Words: ' + data['numWords'];
-  });
+
+  try {
+    const response = await fetch("/api", {
+      method: "POST",
+      body: new URLSearchParams(new FormData(e.target)),
+    });
+
+    /* Places the response data (the number of words) into a variable */
+    const wordCount = await response.json();
+    /* Puts the word count into an HTML element */
+    document.getElementById(
+      "numWords"
+    ).innerHTML = `Words: ${wordCount["numWords"]}`;
+  } catch (error) {
+    console.error(error);
+  }
 });
+
+// function called by the event listeners for submitting (pressing 'Enter') and clicking the submit button
+// Sends the server the string of words in the form and expects the sever to respond with the word count
+async function severCountWords() {}
+
+/////// TEST FUNCTIONS ///////
 
 // This function tests the POST method, which should post to the server the information defined herein
 async function testPOST() {
