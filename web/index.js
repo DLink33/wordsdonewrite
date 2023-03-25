@@ -35,6 +35,26 @@ document.getElementById("myForm").addEventListener("submit", async (e) => {
   }
 });
 
+document
+  .getElementById("submit-button")
+  .addEventListener("click", async (e) => {
+    try {
+      const myForm = document.getElementById("myForm");
+      const response = await fetch("/api", {
+        method: "POST",
+        body: new URLSearchParams(new FormData(myForm)),
+      });
+      /* Places the response data (the number of words) into a variable */
+      const wordCount = await response.json();
+      /* Puts the word count into an HTML element */
+      document.getElementById(
+        "numWords"
+      ).innerHTML = `Words: ${wordCount["numWords"]}`;
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
 // function called by the event listeners for submitting (pressing 'Enter') and clicking the submit button
 // Sends the server the string of words in the form and expects the sever to respond with the word count
 async function severCountWords() {}
