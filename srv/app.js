@@ -16,30 +16,30 @@ const port = 3000;
 
 const webPath = path.resolve(`${__dirname}/../web`);
 
-const parseData = (query) => Object.fromEntries(query.split("&").map(
-  (q) => q.split("=")))
+const parseData = (query) =>
+  Object.fromEntries(query.split("&").map((q) => q.split("=")));
 
 const countWords = (input) => {
   return input.split("+").length;
-}
+};
 
-app.post('/api', (req,res) => {
+app.post("/api", (req, res) => {
   res.writeHead(200, {
-    "Content-type" : "Application/json",
+    "Content-type": "Application/json",
   });
-  let body = '';
-  req.on('data', (data) => {
-    body+=data;
+  let body = "";
+  req.on("data", (data) => {
+    body += data;
     const parsed = parseData(body);
-    const numWords = countWords(parsed['userInput']);
-    let response = {'numWords':numWords}
+    const numWords = countWords(parsed["userInput"]);
+    let response = { numWords: numWords };
     res.write(JSON.stringify(response));
-    res.end()
+    res.end();
   });
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
 });
 
 // Sends back our landing page
@@ -58,7 +58,6 @@ app.listen(port, () => {
 // app.get("/assets/fonts/ebrima.ttf", (req, res) => {
 //   res.sendFile(webPath + "/assets/fonts/ebrima.ttf");
 // });
-
 
 // Send back our landing page
 // app.get("/index.html", (req, res) => {
@@ -103,4 +102,3 @@ app.listen(port, () => {
 //   deleteQuestion(req.params.id);
 //   res.send("{}");
 // });
-

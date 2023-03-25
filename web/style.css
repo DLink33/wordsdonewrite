@@ -1,11 +1,11 @@
 :root {
-  --main-bg-color:    #282828;
+  --main-bg-color:    #242020; /* #282828; */
   --main-text-color:  #e1e1e1;
   --my-yellow:        #f1b433;
   --my-orange:        #f26a38 ;
   --my-red:           #d8164d;
   --my-purple:        #6B39E5;
-  --my-pink:          #c044d5;
+  --my-pink:          #d962c5;
   --my-blue:          #3a25c4;
   --my-green:         #0da379;
 }
@@ -26,9 +26,11 @@
 }
 
 header {
-  margin-top: 1vh;
-  margin-bottom: 1.5vh;
-  text-align: left;
+  display: flex;
+  align-items: left;
+  border-bottom: solid;
+  padding-bottom: 5px;
+  border-color: var(--main-text-color);
 }
 
 body {
@@ -52,9 +54,10 @@ h1 {
 }
 
 h2 {
-  font-family: Corbel, "sans-serif";
+  font-family: 'ebrima', "sans-serif";
   font-size: 4.25vh;
-  color: var(--my-color2);
+  color: var(--my-green);
+  text-align: center;
 }
 
 #my-table {
@@ -74,10 +77,21 @@ h2 {
   max-width: 500px; /* set a maximum width for the columns */
 }
 
-div button {
+button {
+  border: none;
+  padding: 5px;
+  margin: 5px;
   text-align: center;
 }
 
+header button {
+  border: none;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  font-style: 'Descent';
+  color: var(--main-text-color)
+}
 
 .delete-button {
   border: none;
@@ -101,18 +115,38 @@ div button {
   margin: .5vw;
 }
 
-.submit-button {
-  border: none;
-  padding: 5px; /* add padding to create spacing between buttons */
-  margin: 0 5px; /* add margin to separate buttons visually */
+#submit-button {
   background-color: var(--my-blue);
+  font-family: "Descent", Corbel, "serif";
+  font-size: 2vw;
   color: var(--main-text-color);
+  text-align: center;
+  width: 10vw;
+  height: 5vw;
+}
+
+#logIn-button {
+  margin-bottom: 13;
+  background-color: var(--my-blue);
   font-family: "Descent", Corbel, "serif";
   font-size: auto;
   text-align: center;
-  width: 10;
-  height: 3;
+  align-items: center;
+  color: var(--main-text-color);
+  width: 5vw;
+  height: 2vw;
+}
 
+#signUp-button {
+  margin-bottom: 13;
+  background-color: var(--my-purple);
+  font-family: "Descent", Corbel, "serif";
+  font-size: auto;
+  text-align: center;
+  align-items: center;
+  color: var(--main-text-color);
+  width: 7vw;
+  height: 2vw;
 }
 
 .wordsdone {
