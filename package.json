@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/DLink33/wordsdonewrite/issues"
   },
-  "homepage": "https://github.com/DLink33/wordsdonewrite#readme"
+  "homepage": "https://github.com/DLink33/wordsdonewrite#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "locallydb": "^0.0.9"
+  }
 }

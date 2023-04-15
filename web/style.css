@@ -1,6 +1,7 @@
 :root {
   --main-bg-color:    #242020; /* #282828; */
   --main-text-color:  #e1e1e1;
+  --main-text-color-faded: rgba(225, 225, 225, 0.5);
   --my-yellow:        #f1b433;
   --my-orange:        #f26a38 ;
   --my-red:           #d8164d;
@@ -60,23 +61,6 @@ h2 {
   text-align: center;
 }
 
-#my-table {
-  border-collapse: collapse; /* merge adjacent cell borders */
-  border: 2px solid var(--main-text-color); /* set outer border thickness and color */
-  width: 100%; /* set table width */
-}
-
-#my-table th, #my-table td {
-  border: 1px solid var(--main-text-color); /* set inner cell border thickness and color */
-  text-align: center;
-}
-
-#my-table th:first-child, #my-table td:first-child,
-#my-table th:nth-child(2), #my-table td:nth-child(2) {
-  width: 40%; /* set fixed width for the first two columns */
-  max-width: 500px; /* set a maximum width for the columns */
-}
-
 button {
   border: none;
   padding: 5px;
@@ -129,24 +113,30 @@ header button {
   margin-bottom: 13;
   background-color: var(--my-blue);
   font-family: "Descent", Corbel, "serif";
-  font-size: auto;
+  font-size: 0.85vw;
   text-align: center;
   align-items: center;
   color: var(--main-text-color);
   width: 5vw;
   height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items:center
 }
 
 #signUp-button {
   margin-bottom: 13;
   background-color: var(--my-purple);
   font-family: "Descent", Corbel, "serif";
-  font-size: auto;
+  font-size: 0.85vw;
   text-align: center;
   align-items: center;
   color: var(--main-text-color);
   width: 7vw;
   height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items:center
 }
 
 .wordsdone {
@@ -158,24 +148,46 @@ header button {
   text-decoration: underline;
 }
 
+/* Set the height of the form element to 80% of the window's height */
 form {
   display: flex;
   justify-content: right;
   align-items: self-start;
+  height: 65vh; /* 80% of the viewport height */
 }
 
-form input[type="text"]{
+/* Set the height of the textarea element to 70% of the height of its parent element */
+textarea {
   background-color: transparent;
   color: var(--main-text-color);
   border-style: solid;
   border-color: var(--main-text-color);
   outline: none;
   margin: auto;
+  margin-top: 30px;
   font-family: "ebrima", sans-serif;
   font-size: 1.5vw;
   width: 60%;
-  height: 2em;
-  word-wrap: break-word;
-  overflow: hidden;
+  height: 70%;
+  padding: 0.5em;
+  resize: vertical;
 }
 
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+textarea::placeholder {
+  color: var(--main-text-color-faded); /* set the color and transparency of the default text */
+}
+
+#wordCounts {
+  font-family: 'ebrima', "sans-serif";
+  font-size: 2.5vh;
+  color: var(--my-green);
+  margin-top: 30px;
+  text-align: center;
+}
