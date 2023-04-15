@@ -21,13 +21,16 @@ async function getProseInfo() {
       (a, b) => b[1] - a[1]
     );
     for (const [word, count] of sortedCounts) {
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `${count}:\t${word} `;
+      const listItem = document.createElement("div");
+      listItem.className = "word-count-item";
+      listItem.innerHTML = `${count}: ${word} `;
       wordCountsList.appendChild(listItem);
     }
   }
 
-  document.getElementById("userInput").value = proseInfo.prose;
+  document.getElementById("userInput").innerHTML = proseInfo.prose
+    .replace(/\n/g, "<br>")
+    .replace(/\t/g, "&nbsp&nbsp&nbsp");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -168,15 +168,38 @@ textarea {
   font-family: "ebrima", sans-serif;
   font-size: 1.5vw;
   width: 60%;
-  height: 70%;
   padding: 0.5em;
-  resize: vertical;
 }
 
 .center-content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+/*   border: 1px solid var(--my-red); */
+}
+
+.inner-content {
+  width: 60%;
+/*   border: 1px solid var(--my-red); */
+  padding: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.word-count-item {
+  margin: 0.5em;
+  color:var(--my-yellow)
+}
+
+.div-text-area {
+    background-color: transparent;
+    color: var(--main-text-color);
+    border-style: solid;
+    border-color: var(--main-text-color);
+    outline: none;
+    margin: auto;
+    font-family: "ebrima", sans-serif;
+    font-size: 1.5vw;
+    width: 60%;
+    padding: 0.5em;
 }
 
 
@@ -188,6 +211,11 @@ textarea::placeholder {
   font-family: 'ebrima', "sans-serif";
   font-size: 2.5vh;
   color: var(--my-green);
-  margin-top: 30px;
   text-align: center;
+}
+
+#numWords {
+  text-align: center;
+  width: 100%;
+  color: var(--my-red)
 }
