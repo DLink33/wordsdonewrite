@@ -31,8 +31,6 @@ fs.readFile("common-words.txt", "utf8", (err, data) => {
   }
   commonWords = data.split("\n");
   // Put any code that depends on the commonWords array here
-  // For example:
-  console.log(commonWords);
 });
 
 const parseData = (query) =>

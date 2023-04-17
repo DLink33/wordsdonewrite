@@ -17,7 +17,7 @@ document
   .addEventListener("click", async (e) => {
     try {
       const userInput = document.getElementById("userInput");
-      console.log(`This thing:`, JSON.stringify({ input: userInput.value }));
+      console.log(`User's input:`, JSON.stringify({ input: userInput.value }));
 
       const response = await fetch("/api", {
         headers: { "Content-Type": "application/json" },
@@ -26,7 +26,7 @@ document
       });
       /* Places the response data (the number of words) into a variable */
       const proseInfo = await response.json();
-    
+
       window.location = "/analysis.html?cid=" + proseInfo.cid;
     } catch (error) {
       console.error(error);
