@@ -31,8 +31,6 @@ fs.readFile("common-words.txt", "utf8", (err, data) => {
   }
   commonWords = data.split("\n");
   // Put any code that depends on the commonWords array here
-  // For example:
-  console.log(commonWords);
 });
 
 const parseData = (query) =>
@@ -117,23 +115,9 @@ app.listen(port, () => {
 });
 
 // Sends back our landing page
-<<<<<<< HEAD
-// app.get("/", (req, res) => {
-//   res.sendFile(webPath + "/index.html");
-// });
-
-app.get("/style.css", (req, res) => {
-   res.sendFile(webPath + "/style.css");
- });
-
-// app.get("/assets/fonts/DescScor.ttf", (req, res) => {
-//   res.sendFile(webPath + "/assets/fonts/DescScor.ttf");
-// });
-=======
 app.get("/", (req, res) => {
   res.sendFile(webPath + "/index.html");
 });
->>>>>>> f00253327fa50169ef77d2f26a31a7c846821b3d
 
 app.get("/:fileName", (req, res) => {
   res.sendFile(webPath + "/" + req.params.fileName);
