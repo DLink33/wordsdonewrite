@@ -47,9 +47,9 @@ app.listen(port, () => {
 //   res.sendFile(webPath + "/index.html");
 // });
 
-// app.get("/style.css", (req, res) => {
-//   res.sendFile(webPath + "/style.css");
-// });
+app.get("/style.css", (req, res) => {
+   res.sendFile(webPath + "/style.css");
+ });
 
 // app.get("/assets/fonts/DescScor.ttf", (req, res) => {
 //   res.sendFile(webPath + "/assets/fonts/DescScor.ttf");
