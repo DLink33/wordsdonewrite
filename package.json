@@ -18,6 +18,10 @@
   "homepage": "https://github.com/DLink33/wordsdonewrite#readme",
   "dependencies": {
     "express": "^4.18.2",
+<<<<<<< HEAD
     "sqlite3": "^5.1.6"
+=======
+    "locallydb": "^0.0.9"
+>>>>>>> f00253327fa50169ef77d2f26a31a7c846821b3d
   }
 }

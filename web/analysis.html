@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link href="./style.css" rel="stylesheet" type="text/css" />
-    <script defer src="./index.js" type="text/javascript"></script>
+    <script defer src="./analysis.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="./image.ico" />
     <title>WordsDoneWrite!</title>
   </head>
@@ -15,17 +15,29 @@
     <h1 class="wordsdone">
       Words|Done|<span class="wordsdone-write">Write</span>
     </h1>
-    <div class="button-container">
-      <button id="submit-button" type="submit">SUBMIT</button>
+    <!--     <h2 id="numWords">Words: 0</h2>
+        <div class="words-count-container" >
+          <ul id="wordCounts"></ul>
+        </div> -->
+    <div class="center-content">
+      <div class="inner-content">
+        <h2 id="numWords">Words: 0</h2>
+      </div>
     </div>
-    <form id="myForm">
-      <textarea
+    <div class="center-content">
+      <div id="wordCounts" class="inner-content">Pizza</div>
+    </div>
+
+    <div class="center-content">
+      <div
+        class="div-text-area"
         id="userInput"
         name="userInput"
         class="flash-cursor"
         placeholder="Enter your text here..."
-      ></textarea>
-    </form>
+        disabled
+      ></div>
+    </div>
     <footer></footer>
   </body>
 </html>

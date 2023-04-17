@@ -1,7 +1,5 @@
 // This file runs the logic and dynamic element from the client side.
 
-// const { response } = require("express");
-
 console.log("Running index.js...");
 
 // NOTE: Any function given the 'async' keyword means that the function implicitly returns a Promise
@@ -14,42 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
   userInput.focus();
 });
 
-// Add event listener for submitting the form with the words
-document.getElementById("myForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch("/api", {
-      method: "POST",
-      body: new URLSearchParams(new FormData(e.target)),
-    });
-
-    /* Places the response data (the number of words) into a variable */
-    const wordCount = await response.json();
-    /* Puts the word count into an HTML element */
-    document.getElementById(
-      "numWords"
-    ).innerHTML = `Words: ${wordCount["numWords"]}`;
-  } catch (error) {
-    console.error(error);
-  }
-});
-
 document
   .getElementById("submit-button")
   .addEventListener("click", async (e) => {
     try {
-      const myForm = document.getElementById("myForm");
+      const userInput = document.getElementById("userInput");
+      console.log(`This thing:`, JSON.stringify({ input: userInput.value }));
+
       const response = await fetch("/api", {
+        headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: new URLSearchParams(new FormData(myForm)),
+        body: JSON.stringify({ input: userInput.value }),
       });
       /* Places the response data (the number of words) into a variable */
-      const wordCount = await response.json();
-      /* Puts the word count into an HTML element */
-      document.getElementById(
-        "numWords"
-      ).innerHTML = `Words: ${wordCount["numWords"]}`;
+      const proseInfo = await response.json();
+    
+      window.location = "/analysis.html?cid=" + proseInfo.cid;
     } catch (error) {
       console.error(error);
     }
